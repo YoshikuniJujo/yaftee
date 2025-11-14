@@ -21,6 +21,9 @@ description:         Please see the README on GitHub at <https://github.com/Yosh
 
 dependencies:
 - base >= 4.7 && < 5
+- higher-order-freer-monad
+- higher-order-open-union
+- ftcqueue
 
 ghc-options:
 - -Wall
@@ -35,17 +38,6 @@ ghc-options:
 
 library:
   source-dirs: src
-
-executables:
-  yaftee-exe:
-    main:                Main.hs
-    source-dirs:         app
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - yaftee
 
 tests:
   yaftee-test:
